@@ -1,0 +1,22 @@
+{
+  "name": "monkey-patches-node-telegram-bot-api",
+  "version": "0.0.1",
+  "description": "monkey patch for https://github.com/yagop/node-telegram-bot-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monkey-patches/node-telegram-bot-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monkey-patches/node-telegram-bot-api/issues"
+  },
+  "homepage": "https://github.com/monkey-patches/node-telegram-bot-api#readme",
+  "peerDependencies": {
+    "debug": "^2.2.0"
+  }
+}
