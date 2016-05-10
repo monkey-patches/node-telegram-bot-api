@@ -32,6 +32,31 @@ function patchEmitCallbackQuery(TelegramBot) {
     }
 }
 
+function patchSendVenue(TelegramBot)
+{
+    /**
+     * Send venue.
+     * Use this method to send information about a venue.
+     *
+     * @param  {Number|String} chatId  Unique identifier for the message recipient
+     * @param  {Float} latitude Latitude of location
+     * @param  {Float} longitude Longitude of location
+     * @param  {String} title Name of the venue
+     * @param  {String} address Address of the venue
+     * @param  {Object} [options] Additional Telegram query options
+     * @return {Promise}
+     * @see https://core.telegram.org/bots/api#sendvenue
+     */
+    TelegramBot.prototype.sendVenue = function sendVenue(chatId, latitude, longitude, title, address, form) {
+        form = form || {};
+        form.chat_id = chatId;
+        form.latitude = latitude;
+        form.longitude = longitude;
+        form.title = title;
+        form.address = address;
+        return this._request('sendVenue', {form: form});
+    }
+}
 
 module.exports = function (TelegramBot, options) {
     options = options || {};
@@ -43,5 +68,8 @@ module.exports = function (TelegramBot, options) {
     }
     if (options.emitCallbackQuery) {
         patchEmitCallbackQuery(TelegramBot);
+    }
+    if (options.sendVenue){
+        patchSendVenue(TelegramBot);
     }
 };

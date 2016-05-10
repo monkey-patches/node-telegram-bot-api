@@ -19,9 +19,7 @@ var bot = new TelegramBot(token, {polling: true});
 ```
 
 # Options
-
 ## stopPolling
-
 With this option you can stop polling. 
 ```js 
 options = {stopPolling: true};
@@ -33,6 +31,7 @@ bot.initPolling(); // restart
 ```
 
 [related pull request](https://github.com/yagop/node-telegram-bot-api/pull/51)
+
  
 ## emitUpdate
 this path cause `update`-event emitted every time update received 
@@ -52,7 +51,21 @@ options = {emitCallbackQuery: true};
 // usage
 bot.on('callback_query', function(callbackQuery){/* ... */})
 ```
+
 [related pull request](https://github.com/yagop/node-telegram-bot-api/pull/118)
+
+
+## sendVenue
+With this option you can send venue. 
+```js 
+options = {sendVenue: true};
+// setup bot ... 
+// usage
+bot.sendVenue(chatID, lat, long, title, address);
+```
+
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/121)
+
 
 # Compatibility
 
