@@ -19,6 +19,17 @@ var bot = new TelegramBot(token, {polling: true});
 ```
 
 # Options
+## all
+with this option you can enable all patch.
+```js
+options = {all: true};
+// setup bot ... 
+// usage
+bot.stopPolling();
+bot.kickChatMember(chatId, userId);
+//  ...
+```
+
 ## stopPolling
 With this option you can stop polling. 
 ```js 
@@ -65,6 +76,72 @@ bot.sendVenue(chatID, lat, long, title, address);
 ```
 
 [related pull request](https://github.com/yagop/node-telegram-bot-api/pull/121)
+
+
+## kickChatMember
+This option provide `kickChatMember` method
+```js
+options = {kickChatMember: true};
+// setup bot ...
+// usage
+bot.kickChatMember(chatId, userId);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
+
+## unbanChatMember
+This option provide `unbanChatMember` method
+```js
+options = {unbanChatMember: true};
+// setup bot ...
+// usage
+bot.unbanChatMember(chatId, userId);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
+## answerCallbackQuery
+This option provide `answerCallbackQuery` method
+```js
+options = {unbanChatMember: true};
+// setup bot ...
+// usage
+bot.answerCallbackQuery(callbackQueryId, text, showAlert);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
+
+## editMessageText
+This option provide `editMessageText` method
+```js
+options = {editMessageText: true};
+// setup bot ...
+// usage
+bot.editMessageText(text);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
+
+## editMessageCaption
+This option provide `editMessageCaption` method
+```js
+options = {editMessageCaption: true};
+// setup bot ...
+// usage
+bot.editMessageCaption(caption);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
+
+## editMessageReplyMarkup
+This option provide `editMessageReplyMarkup` method
+```js
+options = {editMessageReplyMarkup: true};
+// setup bot ...
+// usage
+bot.editMessageReplyMarkup(replyMarkup);
+```
+[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+
 
 
 # Compatibility

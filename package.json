@@ -1,6 +1,6 @@
 {
   "name": "monkey-patches-node-telegram-bot-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "monkey patch for https://github.com/yagop/node-telegram-bot-api",
   "main": "index.js",
   "scripts": {
