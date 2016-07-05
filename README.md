@@ -26,7 +26,6 @@ options = {all: true};
 // setup bot ... 
 // usage
 bot.stopPolling();
-bot.kickChatMember(chatId, userId);
 //  ...
 ```
 
@@ -55,16 +54,7 @@ bot.on('update', function(update){/* ... */})
 
 
 ## emitCallbackQuery
-this path add support for callback_query and cause `callback_query`-event emitted every time callback query received
-```js 
-options = {emitCallbackQuery: true};
-// setup bot ... 
-// usage
-bot.on('callback_query', function(callbackQuery){/* ... */})
-```
-
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/118)
-
+Removed: update your node-telegram-bot-api
 
 ## sendVenue
 With this option you can send venue. 
@@ -79,74 +69,26 @@ bot.sendVenue(chatID, lat, long, title, address);
 
 
 ## kickChatMember
-This option provide `kickChatMember` method
-```js
-options = {kickChatMember: true};
-// setup bot ...
-// usage
-bot.kickChatMember(chatId, userId);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
-
+Removed: update your node-telegram-bot-api
 
 ## unbanChatMember
-This option provide `unbanChatMember` method
-```js
-options = {unbanChatMember: true};
-// setup bot ...
-// usage
-bot.unbanChatMember(chatId, userId);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
+Removed: update your node-telegram-bot-api
 
 ## answerCallbackQuery
-This option provide `answerCallbackQuery` method
-```js
-options = {unbanChatMember: true};
-// setup bot ...
-// usage
-bot.answerCallbackQuery(callbackQueryId, text, showAlert);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
-
+Removed: update your node-telegram-bot-api
 
 ## editMessageText
-This option provide `editMessageText` method
-```js
-options = {editMessageText: true};
-// setup bot ...
-// usage
-bot.editMessageText(text);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
-
+Removed: update your node-telegram-bot-api
 
 ## editMessageCaption
-This option provide `editMessageCaption` method
-```js
-options = {editMessageCaption: true};
-// setup bot ...
-// usage
-bot.editMessageCaption(caption);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
-
+Removed: update your node-telegram-bot-api
 
 ## editMessageReplyMarkup
-This option provide `editMessageReplyMarkup` method
-```js
-options = {editMessageReplyMarkup: true};
-// setup bot ...
-// usage
-bot.editMessageReplyMarkup(replyMarkup);
-```
-[related pull request](https://github.com/yagop/node-telegram-bot-api/pull/102)
-
-
+Removed: update your node-telegram-bot-api
 
 # Compatibility
 
-I test this package with `node-telegram-bot-api@0.21.1` and `node@v5.3.0`
+I test this package with `node-telegram-bot-api@0.23.3` and `node@v5.3.0`
 
 # Sem version, backward compatibility and ...
 No. this is only :monkey_face: patch. so every time install this package with `--save-exact` option.
